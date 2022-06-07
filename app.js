@@ -5,12 +5,12 @@ app.get('/soma', function(req, res) {
     const {a}=req.query
     const {b}=req.query
     
-    res.send(soma(+a,+b));
+    res.send({"soma":soma(+a,+b)});
 });
 
 app.post('/somab', function(req, res) {
     const {a,b} = req.body    
-    res.send(soma(+a,+b));
+    res.send({"soma":soma(+a,+b)});
 });
 
 function soma(a, b) {
